@@ -13,6 +13,9 @@ const PORT = process.env.PORT || 3000
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+//routes
+app.use('/genshin', require('./routes/api/genshin'))
+
 app.get('/', (req, res) => {
     res.send('al haitham falls harder')
 })
